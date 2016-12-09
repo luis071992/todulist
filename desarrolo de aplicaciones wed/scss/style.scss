@@ -1,0 +1,95 @@
+@import "compass/css3";
+// se agrega el color de la pagina de la app
+body {
+  background: #13756D;
+}
+// se agrega el color de la enboltura color verde y respectivamente la anchura.
+.todo-wrapper {
+  background: #55B6AE;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2em;
+  // se realiza la especificacion del texto, asi como el relleno, el margen y la alinacion del texto que sea manifestado en el centro de cada recuadro.
+  font-family: megrim, fantasy;
+  background: #1CA89C;
+  padding: 40px;
+  margin: 0;
+  color: #333;
+  text-align: center;
+ }
+.emphasis {
+    // se ve el sombreado del text y el tamaño.
+  font-family: vast-shadow, sans-serif;
+  font-size: 4em;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  font-family: megrim, fantasy;
+  font-size: 2em;
+  padding: 40px;
+    // relleno y especificacion del textos...
+  
+  background: #65d8cb; /* Old browsers */
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#65d8cb), to(#72f4e9));
+  background: -webkit-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -moz-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: -o-linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  background: linear-gradient(#65d8cb 0%, #72f4e9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65d8cb', endColorstr='#72f4e9',GradientType=0 );
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+    //  se puede observar donde se manifiestan el fondo y el color, tamaño de cada linea y recuadro del app.
+}
+// anchura de boton
+li input[type="checkbox"] {
+  width: 40px;
+}
+// color de recuadro o linea donde sera ingresado el texto
+.done-true {
+  text-decoration: line-through;
+  color: #ddd;
+}
+// color,tamaño, margen, borde, del cada elemento o barra que se va añadir cada vez que se desee añadir un elemento al darle click del boton de add
+.add-input {
+  width: 60%;
+  height: 20px;
+  float: left;
+  border: none;
+  padding: 40px 0;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  text-indent: 55px;
+}
+//
+.add-btn {
+  width: 40%;
+  border: none;
+  background: #29F4E3;
+  padding: 0;
+  height: 100px;
+  h2 {
+   background: #29F4E3;
+   padding: 0;
+   font-size: 4em;
+   font-family: megrim, fantasy;
+   color: #333;
+  }
+}
+
+.clear-btn {
+  width: 100%;
+  border: none;
+  height: 100px;
+  background: #13756D;
+  font-size: 2em;
+  font-family: megrim, fantasy;
+  color: #aaa;
+}

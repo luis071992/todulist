@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Todo list with AngularJS</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+    <!-- ng-app este se refiere al elemento de raiz del cuerpo de angular-->
+  <html ng-app>
+  <head>
+      <!-- Recuerda usar la librería más reciente disponible de angular mientra llega otra version. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="//use.edgefonts.net/vast-shadow:n4:all.js"></script>
+    <script src="//use.edgefonts.net/vast-shadow:n4:all;megrim.js"></script>
+  </head>
+  <body>
+       <!-- Creamos un controlador, para este caso se llama TodoCtrl -->
+    <div class="todo-wrapper" ng-controller="TodoCtrl">
+        <!--span es para dar color a una parte de texto-->
+      <h2>You've got <span class="emphasis">{{getTotalTodos()}}</span> things to do</h2>
+      <ul>
+          <!--ng-repeat esto sirve para crear una instancia de cada elemento dentro de un grupo de elementos en el HTML. Algo asi como una iteración que muestra los datos correspondientes a cada elemento de un grupo, ng-repeat no permite elemento repetido-->
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form>
+          <!--ng-model= puede hacer visibles los elemento HTML de tipo input, textarea o select y (conecta) al controlador para permitir su posterior tratamiento desde allí. -->
+        <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+          <!--ng-click  es uns variable de recuento por cada vez que se da click en el boton-->
+        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+      </form>
+      
+      <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+    </div>
+  </body>
+  
+</html>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'></script>
+     <!-js/index.js es el nombre del directorio de angularjs--->
+    <script src="js/index.js"></script>
+
+</body>
+</html>
